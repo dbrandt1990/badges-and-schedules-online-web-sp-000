@@ -20,12 +20,14 @@ def assign_rooms(attendees)
 end
 
 def printer(attendees)
-  badges = []
-  room_assigned = assign_rooms(attendees)
-  
-  attendees.each do |name|
+  badges =  attendees.each do |name|
     badges << badge_maker(name)
   end
+  room_assigned = assign_rooms(attendees)
+  
+  # attendees.each do |name|
+  #   badges << badge_maker(name)
+  # end
   
   badges.each do |badge|
     puts badge
