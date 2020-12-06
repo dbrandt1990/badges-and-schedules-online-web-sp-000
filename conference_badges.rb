@@ -18,3 +18,12 @@ def assign_rooms(attendees)
   end
   results
 end
+
+def printer(attendees)
+  attendees.each do |name|
+    puts badge_maker(name)
+  end
+  attendees.each do |name|
+    puts assign_rooms(name)
+  end
+end
