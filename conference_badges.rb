@@ -21,17 +21,16 @@ end
 
 def printer(attendees)
   badges = []
-  room_assigned = []
+  room_assigned = assign_rooms(attendees)
+  
   attendees.each do |name|
     badges << badge_maker(name)
-  end
-  attendees.each do |name|
-    room_assigned << assign_rooms(name)
   end
   
   badges.each do |badge|
     puts badge
   end
+  
   room_assigned.each do |assign| 
     puts assign
   end
